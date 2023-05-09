@@ -36,7 +36,7 @@
             </style>
         
 </head>
-<body>
+<body onload="getLocation()">
     
     
             <div class="folium-map" id="map_bed2c959d070cf976f090ef35dd21ada" ></div>
@@ -45,23 +45,26 @@
 <script>
     
     
-            if ("geolocation" in navigator) {
-  // geolocation is available
-  navigator.geolocation.getCurrentPosition(
-    position => {
-      const { latitude, longitude } = position.coords;
-      console.log(`Latitude: ${latitude}, Longitude: ${longitude}`);
-      // use the latitude and longitude to update the map center
-      map_bed2c959d070cf976f090ef35dd21ada.setView([latitude, longitude], 13);
-    },
-    error => {
-      console.error(`Error getting current position: ${error.message}`);
+            function getLocation() {
+      if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } else {
+        x.innerHTML = "Geolocation is not supported by this browser.";
+      }
     }
-  );
-} else {
-  // geolocation is not available
-  console.error("Geolocation is not supported by this browser.");
-}
+
+    function showPosition(position) {
+      var latitude = position.coords.latitude;
+      var longitude = position.coords.longitude;
+
+      var map_ee55a493b157f66672a8d0e2c1ce12ae = L.map("map_ee55a493b157f66672a8d0e2c1ce12ae", {
+        center: [latitude, longitude],
+        crs: L.CRS.EPSG3857,
+        zoom: 13,
+        zoomControl: true,
+        preferCanvas: false,
+      });
+    }
 
 
             
