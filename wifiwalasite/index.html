@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>wifiwalasite</title>
+    
     <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
     
         <script>
@@ -21,13 +21,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet-control-search/dist/leaflet.control.search.min.css" />
-
     
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_28217718c62d1fe190eea6f9827051f6 {
+                #map_bed2c959d070cf976f090ef35dd21ada {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -41,18 +39,18 @@
 <body>
     
     
-            <div class="folium-map" id="map_28217718c62d1fe190eea6f9827051f6" ></div>
+            <div class="folium-map" id="map_bed2c959d070cf976f090ef35dd21ada" ></div>
         
 </body>
 <script>
     
     
-            var map_28217718c62d1fe190eea6f9827051f6 = L.map(
-                "map_28217718c62d1fe190eea6f9827051f6",
+            var map_bed2c959d070cf976f090ef35dd21ada = L.map(
+                "map_bed2c959d070cf976f090ef35dd21ada",
                 {
-                    center: [23.37989, 85.3338633333],
+                    center: [23.37987, 85.335715],
                     crs: L.CRS.EPSG3857,
-                    zoom: 10,
+                    zoom: 13,
                     zoomControl: true,
                     preferCanvas: false,
                 }
@@ -62,49 +60,50 @@
 
         
     
-            var tile_layer_8c01631de8d753c362a3a0c023886a99 = L.tileLayer(
+            var tile_layer_b94017af183f1c12bb254319d1078555 = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca target=\"_blank\" href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca target=\"_blank\" href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_28217718c62d1fe190eea6f9827051f6);
+            ).addTo(map_bed2c959d070cf976f090ef35dd21ada);
         
     
-            var marker_20f041001fccba888d3b4776e37eb089 = L.marker(
-                [23.37989, 85.3338633333],
+            var marker_99827cf96c9c708f8e3d7abc7ad62a2b = L.marker(
+                [23.3798783333333, 85.333825],
                 {}
-            ).addTo(map_28217718c62d1fe190eea6f9827051f6);
+            ).addTo(map_bed2c959d070cf976f090ef35dd21ada);
         
     
-            var icon_e464669cc269a3f69307ebf5002cdd5c = L.AwesomeMarkers.icon(
-                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "blue", "prefix": "glyphicon"}
-            );
-            marker_20f041001fccba888d3b4776e37eb089.setIcon(icon_e464669cc269a3f69307ebf5002cdd5c);
-        
-    
-        var popup_ea0620480a9aefcf1e334f09ade1a29f = L.popup({"maxWidth": "100%"});
+        var popup_4aaffb3ca5aaa1b082d9ce405357478e = L.popup({"maxWidth": "100%"});
 
         
             
-                var html_c5b04e9a56d4e536be85af185ab4a32a = $(`<div id="html_c5b04e9a56d4e536be85af185ab4a32a" style="width: 100.0%; height: 100.0%;">SSDI'Maa Durga 5G'Password'0987654321' </div>`)[0];
-                popup_ea0620480a9aefcf1e334f09ade1a29f.setContent(html_c5b04e9a56d4e536be85af185ab4a32a);
+                var html_0f564a438ca7e191c2daa08b46b951d5 = $(`<div id="html_0f564a438ca7e191c2daa08b46b951d5" style="width: 100.0%; height: 100.0%;">bssid:00:67:62:ae:b0:04 ssid:Maa Durga 5G password:0987654321</div>`)[0];
+                popup_4aaffb3ca5aaa1b082d9ce405357478e.setContent(html_0f564a438ca7e191c2daa08b46b951d5);
             
         
 
-        marker_20f041001fccba888d3b4776e37eb089.bindPopup(popup_ea0620480a9aefcf1e334f09ade1a29f)
+        marker_99827cf96c9c708f8e3d7abc7ad62a2b.bindPopup(popup_4aaffb3ca5aaa1b082d9ce405357478e)
         ;
-        // Load the plugin
-        $.getScript("https://cdn.jsdelivr.net/npm/leaflet-control-search/dist/leaflet.control.search.min.js", function () {
-          // Create the search bar and add it to the map
-          var searchControl = new L.Control.Search({
-            layer: markerLayer,
-            propertyName: 'ssid',
-            marker: false,
-            moveToLocation: function (latlng) {
-              map.setView(latlng, 18); // set the zoom level for the found location
-            }
-          });
-          searchControl.addTo(map);
-        });
+
         
+    
+    
+            var marker_b5f197a0fe99444dfd10a31e888a765f = L.marker(
+                [23.37987, 85.335715],
+                {}
+            ).addTo(map_bed2c959d070cf976f090ef35dd21ada);
+        
+    
+        var popup_418c8811773c6178c14ff5db696ed787 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_88cf5276df6f582f27a843cd5b9f0623 = $(`<div id="html_88cf5276df6f582f27a843cd5b9f0623" style="width: 100.0%; height: 100.0%;">bssid:a8:da:0c:86:31:f5 ssid:JioFiber-LAGuB_5G password:asdf1234</div>`)[0];
+                popup_418c8811773c6178c14ff5db696ed787.setContent(html_88cf5276df6f582f27a843cd5b9f0623);
+            
+        
+
+        marker_b5f197a0fe99444dfd10a31e888a765f.bindPopup(popup_418c8811773c6178c14ff5db696ed787)
+        ;
 
         
     
